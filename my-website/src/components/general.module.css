@@ -1,0 +1,33 @@
+.bg{
+    background-color: rgb(33, 33, 33);
+    font: 1.3rem Inconsolata, monospace;
+
+}
+
+.mainPage {
+    background-color: rgb(33, 33, 33);
+    min-height: 100vh;
+    width: "full";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* font-size: calc(10px + 2vmin); */
+    scroll-behavior: smooth;
+    
+  }
+
+.nav{
+    color: white;
+
+}
+
+.welcome{
+    height: 600px;
+}
+
+.intro{
+    font-size: large;
+    color: white;
+    display: flex;
+}
