@@ -11,8 +11,9 @@ class Experiences extends React.Component {
     render() {
         console.log(this.props.abbreviated)
       return (
+      
         <div className={classes.experiences}>
-            <Box>
+            <Box >
                 <Flex> 
                     <div className={classes.exp_where}>
                     {this.props.where} 
@@ -23,11 +24,20 @@ class Experiences extends React.Component {
                     </div>
                     </Flex>
                 
-                {this.props.abbreviated ? <div/> : <div><div className={classes.lil_dash}/><div className={classes.exp_what}> {this.props.what}</div></div>}
-           
-                
-            </Box>
-        </div>
+                {this.props.abbreviated ? <div/> : 
+                    <div>
+                    <div className={classes.lil_dash}/>
+                    {this.props.what.map((sentence) =>(
+                  
+                    <Text fontSize={{ base: '11px', md: '13px', lg: '14px' }}>
+                    <div className={classes.exp_what}> {sentence} <br></br></div>
+                    </Text>
+                ))}
+                </div>
+               }
+          </Box>
+      </div>
+    
       );
     }
 }

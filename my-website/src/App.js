@@ -2,29 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 import {Row, Col} from "react-bootstrap";
 import Nav from './components/Nav';
-import { Text, Box, Flex, Spacer } from '@chakra-ui/react';
+import { Link , Outlet} from "react-router-dom";
+import { Text, Box, Flex, Spacer, Image} from '@chakra-ui/react';
 import classes from './components/general.module.css';
-import Resume from './components/cv_components/Resume';
-import Welcome from './components/Welcome';
-import Thanks from './components/Thanks';
+import 'animate.css';
 
 function App() {
   return (
     
      
     <Box>
-      <div className={classes.bg}>
-      <Nav/>
-      
-      <div className= {classes.mainPage}>
-      
-      <Welcome/>
-      <Resume></Resume>
-      <Thanks></Thanks>
-      
-      </div>
-      
-      </div>
+       <div className={classes.bg}> 
+        <Nav/>
+     </div>
+     <Outlet/>
     </Box>
    
   );

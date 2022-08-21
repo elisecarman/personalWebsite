@@ -19,11 +19,12 @@ class Souvenir extends React.Component {
     
     render_item = (content, type) => {
         if (type == "classes"){
-            return <Classes
+            return <div style={{width : "100%"}}><Classes
             name = {content.name}
             grade = {content.grade}>
 
             </Classes>
+            </div>
         } else if (type == "skills"){
             return <Skills name = {content}></Skills>
         } else if (type == "experiences"){
@@ -55,7 +56,7 @@ class Souvenir extends React.Component {
       return (
         <div id ="report">
         <div className={classes.souvenir}>
-            <Box>
+            <Box > {/* w={[250, 300, 400]} */}
             <div className={classes.so_name}> Elise Carman </div>
             <Flex>
                 <Box>
@@ -65,28 +66,31 @@ class Souvenir extends React.Component {
                 <Spacer></Spacer>
                 <div className={classes.so_gpa}> GPA: 3.81</div>
             </Flex>
-            <div >
+   
             <textarea className={classes.so_comment} placeholder={"Type in your thoughts"}>
             {/* Type in your thoughts */}
             </textarea>
-            </div>
-            <Box>
+            
+            
                 <Flex>
-                <div className={classes.buttons}>
+                <div className={classes.buttons} onClick={this.props.handleReset}>
                 <Button 
                 border='dotted 2px' 
-                colorScheme='cyan' 
+                colorScheme='gray' 
                 variant='outline' 
                 fontSize={"15"} 
                 marginRight={"5"}
                 onClick= {this.props.handleReset}
+                transition= "0.3"
                 >
                     Reset
                 </Button>  
+              
+                
                 
                 <Button 
                 border='dotted 2px' 
-                colorScheme='cyan' 
+                colorScheme='gray' 
                 variant='outline' 
                 fontSize={"15"} 
                 marginLeft={"5"}
@@ -96,7 +100,8 @@ class Souvenir extends React.Component {
                 </Button>
                 </div>
                 </Flex>
-                </Box>
+                
+                
                 <div className={classes.so_drop}>
                 <Droppable droppableId={this.props.droppableId}>
                 {(provided, snapshot) => (
@@ -108,7 +113,8 @@ class Souvenir extends React.Component {
                             <Draggable
                                 key={item.id}
                                 draggableId={item.id}
-                                index={index}>
+                                index={index}
+                                renderClone = {false}>
                                 {(provided, snapshot) => (
                                     <div
                                         ref={provided.innerRef}

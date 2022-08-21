@@ -11,10 +11,11 @@ class Skills extends React.Component {
   
     render() {
       return (
-        
+        <Text fontSize={{ base: '11px', md: '13px', lg: '15px' }}>
         <div className={classes.skills}>
         {this.props.name}
         </div>
+        </Text>
       );
     }
 }

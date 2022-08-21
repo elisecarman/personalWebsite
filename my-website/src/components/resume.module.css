@@ -1,21 +1,17 @@
 .mainPage {
     background-color: rgb(33, 33, 33);
-    min-height: 100vh;
+    /* min-height: 100vh; */
     width: "full";
     display: flex;/* 
     flex-direction: column; */
     align-items: center;
     justify-content: center;
     /* font-size: calc(10px + 2vmin); */
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth; 
   }
 
 
-.list{
-    font: 1.3rem Inconsolata, monospace;
-    width: 75%;
-}
+
 
 .list2{
     font: 1.3rem Inconsolata, monospace;
@@ -34,26 +30,44 @@
 .skills {
 background-color:  rgb(59, 59, 59);
 min-height: 30px; 
-font-size: 15px;
+/* font-size: 15px; */
 width: 100px;
 text-align: center;
 border-radius: 10px;
 border-color:  rgb(255, 203, 71);
 border-width: 2px;
 color: rgb(255, 203, 71);
+transition: 0.3s;
 }
+
+
+.skills:hover{
+    background-color: rgb(118, 92, 36);
+    border: dotted;
+}
+
 
 .languages {
 background-color: rgb(59, 59, 59);
-font-size: 15px;
+
+/* font-size: 15px; */
 min-height: 30px; 
-width: 80px;
+width: 100px;
+/* max-block-size: 90px; */
 text-align: center;
 border-radius: 10px;
 border-color: white;
 border-width: 2px;
 color: whitesmoke;
+padding: 5px;
+transition: 0.3s;
 }
+
+.languages:hover{
+    background-color: rgb(137, 137, 137);
+    border: dotted;
+}
+
 
 
 /* CLASSES */
@@ -69,13 +83,21 @@ color: whitesmoke;
 
 .classes {
     background-color: rgb(59, 59, 59);
-    min-height: 90px; 
-    height: 130px;
-    width: 130px;
+    height: 150px;
+    /* width: 150px; */
     color: thistle;
     border-radius: 5px;
     padding: 2px 2px 2px 2px;
+    transition: 0.3s;
     }
+
+.classes:hover{
+    background-color: rgb(87, 61, 87)
+}
+
+.class_size{
+    width: 150px;
+}
 
 /* Experiences */
 
@@ -84,7 +106,12 @@ color: whitesmoke;
     min-height: 30px; 
     color: tomato;
     padding: 10px 10px 10px 10px;
+    transition: 0.3s;
     }
+
+.experiences:hover{
+    background-color: rgb(72, 34, 27)
+}
 
 .exp_when{
     font-size: 18px;
@@ -94,7 +121,7 @@ color: whitesmoke;
 
 .exp_what{
     padding-top: 10px;
-    font-size: 14px;
+   /*  font-size: 14px;  */
 }
 
 .exp_where{
@@ -105,17 +132,23 @@ color: whitesmoke;
 .lil_dash{
     border-top: 2px dotted tomato;
     
-    margin: 0px 0px 0px 0px;
 }
 
 /* Projects */
 
 .projects {
     background-color: rgb(59, 59, 59);
-    min-height: 30px; 
+    /* min-height: 30px;  */
     color: peru;
     padding: 10px 10px 10px 10px;
+    /* max-width: 200px; */
     }
+
+
+.projects:hover{
+    background-color: rgb(92, 56, 22)
+}
+    
 
 .pro_what{
     
@@ -131,57 +164,63 @@ color: whitesmoke;
 
 
 .souvenir {
-    min-height: 30px; 
-    width: 400px;
     background-color: rgb(33, 33, 33);
-    min-height: 100vh;
-    
-    margin-top: 10px;
-    margin-bottom: 10px;
+   /*  min-height: 100vh; */
+    height: 80%;
+    display: flex;
     padding: 10px 10px 10px 10px;
     font: 1.3rem Inconsolata, monospace;
+    width: 300px;
     }
 
+/* 
+color: turquoise; */
     
 .so_name{
     font-size: 24px;
-    color: rgb(60, 157, 192);
+    color: rgb(122, 134, 243);
+    /* color: rgb(201, 148, 255); */
 }
 
 .so_grade{
     font-size: 16px;
-    color: rgb(60, 157, 192);
+    color: rgb(122, 134, 243);
     margin-bottom: 10px;
 }
 
 .so_gpa{
     margin-top: -1px;
     font-size: 18px;
-    color: rgb(60, 157, 192);
+    color: rgb(122, 134, 243);
 }
 
 .so_comment{
     height: 50px;
-    width: "full";
-    border: 1px dotted rgb(60, 157, 192);
-    width: 380px;
+    width: 100%;
+    border: 1px dotted rgb(122, 134, 243);
+    /* width: 380px; */
     background-color: transparent;
-    color: rgb(60, 157, 192);
+    color: rgb(122, 134, 243);
 }
 
 .so_drop{
-    height: 850px;
-    
-    border: 1px dotted rgb(60, 157, 192);
+    height: 100%;
+    border: 1px dotted rgb(122, 134, 243);
     vertical-align: center;
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: 0.3s;
+    color: rgb(122, 134, 243);
+}
+
+.so_drop:hover{
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .isEmpty{
-    color: rgb(60, 157, 192);
     width: "fill";
     height: "fill";
 }
@@ -189,14 +228,21 @@ color: whitesmoke;
 .buttons{
     font-size: 20px;
     margin: 10px 0px 0px 0px;
-    align-items: center;
+    width: 100%;
+    justify-content: center;
+    color: rgb(122, 134, 243);
+    
 }
+
+
 
 /* EXTRA */
 
 .legend{
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
+    padding-top: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
 }
 
 .legend_skills {
@@ -244,4 +290,10 @@ padding: 5px 5px 5px 5px;
     color: thistle;
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 10px 10px; 
+}
+
+.resume_intro{
+    font-size: 40px;
+    padding-top: 60%;
+    padding-left: 40%;
 }

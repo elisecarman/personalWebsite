@@ -18,7 +18,6 @@ class ListContainer extends React.Component {
             return <Classes
             name = {content.name}
             grade = {content.grade}>
-
             </Classes>
         } else if (type == "skills"){
             return <Skills name = {content}></Skills>
