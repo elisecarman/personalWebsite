@@ -21,9 +21,11 @@ class Welcome extends React.Component {
         <div className={classes.bg}>
         <div className={classes.mainPage}>
         {/* */}
+          
             <div className={classes.img1}>
             {<Image src={art4}></Image> }
             </div>
+       
 
             <Grid
               /* h='200px' */

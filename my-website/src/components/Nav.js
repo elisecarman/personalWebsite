@@ -3,7 +3,8 @@ import { Text, Flex, Spacer, textDecoration } from '@chakra-ui/react';
 import classes from './general.module.css';
 import { Link , Outlet, NavLink} from "react-router-dom";
 import { hover } from '@testing-library/user-event/dist/hover';
-
+/* import art4 from './assets/artwork4.png';
+ */
 const Nav = () => {
   const [scroll, setScroll] = useState(false);
  

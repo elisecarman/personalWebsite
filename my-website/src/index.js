@@ -12,6 +12,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Resume from './routes/Resume';
 import Welcome from './routes/Welcome';
 import 'animate.css';
+import art4 from './assets/artwork4.png';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
