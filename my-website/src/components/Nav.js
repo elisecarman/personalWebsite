@@ -42,7 +42,7 @@ const Nav = () => {
         };
       }}
       className={classes.nav_items} 
-      to="/welcome"
+      to="/"
       >
       <div className={classes.nav_single}>
         Home

@@ -19,15 +19,12 @@ root.render(
   <BrowserRouter>
   <Routes>
   <Route path="/" element={<App />}> 
-    <Route path="welcome" element={<Welcome />} />
+    <Route path="/" element={<Welcome />} />
     <Route path="resume" element={<Resume />} />
     <Route
       path="*"
-      element={
-        <main style={{ padding: "1rem" }}>
-          <p>There's nothing here!</p>
-        </main>
-      }
+      element=
+        {<Welcome />}
     />
     </Route>
     
